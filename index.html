@@ -1,330 +1,560 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=0.8">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Daily Sun | Home</title>
+
+  <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/x-icon" href="images/logo-default-293x44-removebg-preview.png">
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="about.css">
-    <title>Daily Sun | Home</title>
-  </head>
-  <body>
-
-    <div class="loader"></div>
+   <meta name="Junior." content="Daily Sun Pharmaceutical - A a limited liability Company ">
+    <meta name="description" content="Feel free to connect with us.">
 
 
-    <div class="popup" id="cookiesPopup">
-      <p>This website uses cookies to ensure you get the best experience.</p>
-      <button id="acceptCookies" class="button accept-button">Accept</button>
-      <button id="declineCookies" class="button decline-button">Decline</button>
-   
-    </div>
-   
-    <header>
-      <nav class="section__container nav__container">
-        <div class="nav__logo"><img src="./images/logo-default-293x44-removebg-preview.png" alt=""></div>
-        <ul class="nav__links">
+  <!-- 
+    - favicon
+  -->
+  <!-- <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"> -->
+  <link rel="icon" type="image/x-icon" href="assets/images/Screenshot__4_-removebg-preview.png">
 
-          <!-- <div class="nav__logo">Daily<span>Sun</span><br>
-          Phamaceutical.</div>
-          <ul class="nav__links"> -->
 
-          <li class="link"><a href="#" id="ab">Home</a></li>
-          <li class="link"><a href="about.html">About Us</a></li>
-          <li class="link"><a href="product.html">Products</a></li>
-     
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-bg.svg">
+  <link rel="preload" as="image" href="./assets/images/hero-banner-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-shape-1.svg">
+  <link rel="preload" as="image" href="./assets/images/hero-shape-2.png">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header style="background: #052d25;" class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/Screenshot__4_-removebg-preview.png" width="82" height="50" alt="EduWeb logo">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="#" class="logo">
+            <img src="assets/images/Screenshot__4_-removebg-preview.png" width="60" height="50" alt="EduWeb logo">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon style="color: black;" name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul  class="navbar-list">
+
+          <li   class="navbar-item">
+            <a  id="ac" href="#home" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a style="color: #fb923c;" href="about.html" class="navbar-link" data-nav-link>About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a style="color: #fb923c;"  href="products.html" class="navbar-link" data-nav-link>Products</a>
+          </li>
+
+      
+
         </ul>
-        <a href="contact.html" class="btn">Contact Us</a>
-  
+
       </nav>
 
+      <div class="header-actions">
+
+        <!-- <button class="header-action-btn" aria-label="toggle search" title="Search">
+          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <button class="header-action-btn" aria-label="cart" title="Cart">
+          <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+
+          <span class="btn-badge">0</span>
+        </button> -->
+
+        <a href="contact.html" class="btn has-before">
+          <span class="span">Connect with us</span>
+
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+        </a>
+
+        <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
 
 
-      <div class="section__container header__container">
-        <div class="header__content">
-          <h2 style="color: white;">Welcome to Daily Sun <span>Pharmaceutical</span>.</h2>
-          <h1>We Provide an Exceptional Patient Experience</h1>
-          <p>
-            Welcome, where exceptional patient experiences are our priority.
-            With compassionate care, state-of-the-art facilities, and a
-            patient-centered approach, we're dedicated to your well-being. Trust
-            us with your health and experience the difference.
-          </p>
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero has-bg-image" id="home" aria-label="home"
+        style="background:#052d25; ">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h2><span style="color:#fb923c;">Welcome to Daily Sun Pharmaceutical</span></h2>
+            <h1 style="color: white;" class="h1 hero-title">We Provide an Exceptional Patient Experience.</h1>
+
+            <p style="color: white;" class="hero-text">
+              Welcome, where exceptional patient  experiences are our priority.
+            </p>
+            <a href="#cc" class="btn has-before">
+              <span class="span">Learn more about us</span>
+
+              <ion-icon name="arrow-down-outline" aria-hidden="true"></ion-icon>
+            </a>
+
         
-          <a href="#about" id="about"  class="btn">See More</a>
+
+          </div>
+
+          <!-- <figure class="hero-banner">
+
+            <div class="img-holder one" style="--width: 270; --height: 300;">
+              <img src="./assets/images/hero-banner-1.jpg" width="270" height="300" alt="hero banner" class="img-cover">
+            </div>
+
+            <div class="img-holder two" style="--width: 240; --height: 370;">
+              <img src="./assets/images/hero-banner-2.jpg" width="240" height="370" alt="hero banner" class="img-cover">
+            </div>
+
+            <img src="./assets/images/hero-shape-1.svg" width="380" height="190" alt="" class="shape hero-shape-1">
+
+            <img src="./assets/images/hero-shape-2.png" width="622" height="551" alt="" class="shape hero-shape-2">
+
+          </figure> -->
+
         </div>
-        <!-- <div class="header__form">
-          <form>
-            <h1 class="num">Book Now</h1 class="num">
-            <input type="text" placeholder="First Name" />
-            <input type="text" placeholder="Last Name" />
-            <input type="text" placeholder="Address" />
-            <input type="text" placeholder="Phone No." />
-            <button class="btn form__btn">Book Appointment</button>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #CATEGORY
+      -->
+      <section id="cc"></section>
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+
+          <figure class="about-banner">
+
+            <div class="img-holder" style="--width: 520; --height: 370;">
+              <img src="https://i.ibb.co/yRTw5KD/23.png" width="520" height="370" loading="lazy" alt="about banner"
+                class="img-cover">
+            </div>
+
+       
+
+
+            <img src="./assets/images/about-shape-3.png" width="722" height="528" loading="lazy" alt=""
+              class="shape about-shape-3">
+
+          </figure>
+
+          <div class="about-content">
+
+            <p style="color: #fb923c;" class="section-subtitle">About Us</p>
+
+            <h2 style="color: rgb(48, 48, 48);" class="h2 section-title">
+            Who are we?
+            </h2>
+
+            <p  style="color: rgb(49, 49, 49); font-size: 16px;" class="section-text">
+              Daily Sun Pharmaceutical Company limited is a limited liability Company that is engaged in the business of manufacturing and distribution of healthcare products with over 150 workers. 
+              <br>
+              <br>
+              We have our manufacturing site in the industrial layout of Ogun State Nigeria; about 40km from the nearest international airport; Muritala Mohammed airport Lagos producing a wide range of ethical and over the counter (OTC) formulations (Anti-malaria, multivitamins Analgesic, Antitussives and Antioxidants) for human healthcare.
+
+            </p>
+
+            <a href="about.html" class="btn has-before">
+              <span class="span">Learn more </span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+
+       
+
+            <img src="./assets/images/about-shape-4.svg" width="100" height="100" loading="lazy" alt=""
+              class="shape about-shape-4">
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <section class="section stats" aria-label="stats">
+        <div class="container">
+          <p style="color: #fb923c;" class="section-subtitle" id="service-label">Our Progress stats</p>
+
+          <h2 style="margin: 20px;" class="h2 section-title">
+            What we've accoplished so far in <br> the past years.
+          </h2>
+          <br>
+
+
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="stats-card" style="--color: 170, 75%, 41%; ">
+                <h3 class="card-title">850+</h3>
+                <p class="card-text">
+                  Successful Cases
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div class="stats-card" style="--color: 170, 75%, 41%; ">
+                <h3 class="h4 card-title">750+</h3>
+
+                <p class="card-text">
+                  Satisfied Customers
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div class="stats-card" style="--color: 170, 75%, 41%; ">
+                <h3 class="h4 card-title">150</h3>
+
+                <p class="card-text">
+        Team Members
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="stats-card" style="--color: 170, 75%, 41%; ">
+                
+                <h3 class="h4 card-title">99.9%</h3>
+
+                <p class="card-text">
+             Satisfaction Rate
+                </p>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+
+          <figure class="about-banner">
+
+            <div class="img-holder" style="--width: 520; --height: 370;">
+             
+            <img src="https://i.ibb.co/Vtcw8xS/21.png" width="520" height="370" loading="lazy" alt="about banner"
+                class="img-cover">
+            </div>
+
+          
+
+      
+
+            <img src="./assets/images/about-shape-3.png" width="722" height="528" loading="lazy" alt=""
+              class="shape about-shape-3">
+
+          </figure>
+
+          <div class="about-content">
+
+            <p style="color: #fb923c;" class="section-subtitle" id="about-label">Why Choose Us?</p>
+
+            <h2 style="color: rgb(43, 42, 42);" class="h2 section-title">
+              We bring solutions to make life easier for our clients.
+            </h2>
+
+            <p class="section-text">
+          There are so many reasons why you should choose <span style="color: #01b18e;">Daily Sun Pharmaceutical</span> as your go to pharmacy, an here are some of the reasons:
+            </p>
+
+            <ul class="about-list">
+
+              <li class="about-item">
+                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+
+                
+                <spna class="span">Proper Customer Care</spna>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+
+                <spna class="span">On Time Delivey Services</spna>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+
+                <spna class="span">Legally & Medically Approved</spna>
+              </li>
+
+              <li class="about-item">
+                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+
+                <spna class="span">High Quality Products</spna>
+              </li>
+
+            </ul>
+
+            <img src="./assets/images/about-shape-4.svg" width="100" height="100" loading="lazy" alt=""
+              class="shape about-shape-4">
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+
+    <div class="footer-top section">
+      <div class="container grid-list">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/Screenshot__4_-removebg-preview.png" width="62" height="50" alt="EduWeb logo">
+          </a>
+
+          <p class="footer-brand-text">
+            Head Office: Plot 3 & 4 Tomori Industrial,  estate off Idi Roko road Ota Ogun state Nigeria.  
+          </p>
+
+          <div class="wrapper">
+          
+          </div>
+
+          <div class="wrapper">
+            <span style="font-weight: bolder;" class="span">Call:</span>
+
+            <a  href="tel:+234 916 074 3899" class="footer-link">+234 916 074 3899</a>
+          </div>
+
+          <div class="wrapper">
+            <span style="font-weight: bolder;"  class="span">Email:</span>
+
+            <a href="" id="emailLink" class="footer-link">dailysunpharmacoltd@gmail.com</a>
+          </div>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Learn More</p>
+          </li>
+
+          <li>
+            <a href="about.html" class="footer-link">About</a>
+          </li>
+
+          <li>
+            <a href="products.html" class="footer-link">Products</a>
+          </li>
+
+          <li>
+            <a href="contact.html" class="footer-link">Contact Us</a>
+          </li>
+
+
+        </ul>
+
+        <ul class="footer-list">
+
+        
+
+        </ul>
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Contacts</p>
+
+          <p class="footer-list-text">
+            Enter your email address to register to our newsletter subscription
+          </p>
+
+          <form action="" class="newsletter-form">
+            <input type="email" name="email_address" placeholder="Your email" required class="input-field">
+
+            <button type="submit" class="btn has-before">
+              <span class="span">Subscribe</span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </button>
           </form>
-        </div> -->
-      </div>
-    </header>
 
+          <ul class="social-list">
 
+            <li>
+              <a href="https://web.facebook.com/me/" target="_blank" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
 
- 
-    <section class="section__container about__container">
-      <div class="about__content" >
-        <h2 class="section__header" id="#about" >About Us</h2>
-        <p>
-          Daily Sun Pharmaceutical Company limited is a limited liability Company that is engaged in the business of manufacturing and distribution of healthcare products with over 150 workers. 
-          <br>
-          <br>
-          We have our manufacturing site in the industrial layout of Ogun State Nigeria; about 40km from the nearest international airport; Muritala Mohammed airport Lagos producing a wide range of ethical and over the counter (OTC) formulations (Anti-malaria, multivitamins Analgesic, Antitussives and Antioxidants) for human healthcare.
-        </p>
-        
-        <br>
-        <a href="about.html" class="btn">Learn More</a>
-  
+          
 
-      </div>
-      <div class="about__image">
-        <img src="images/african-american-biologist-scientist-dropping-liquid-using-micropipette-petri-dish.jpg" style="width: 1000px;" alt="about" />
-      </div>
-    </section>
+            <li>
+              <a href="https://www.instagram.com/dailysunpharmaceuticalco.ltd/" target="_blank" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
 
+            <li>
+              <a href="https://twitter.com/DailysunP534" target="_blank" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
 
-    
+            <li>
+              <a href="https://wa.link/di5apq" target="_blank" class="social-link">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+              </a>
+            </li>
 
-    <section class="section__container service__container">
-      <div class="service__header">
-        <div class="service__header__content">
-          <h2 class="section__header">Our Progress Stats</h2>
-          <p>
-          Here's a numerical representation of both our <strong>progress</strong> & <strong>success</strong>rate to our previous customers througout the years.
-          </p>
-        </div>
-        <a href="contact.html" class="service__btn">Feel free to connect with us</a>
-        
-      </div>
-      <div class="service__grid">
-        <div class="service__card">
-          <span><i class="ri-microscope-line"></i></span>
-          <h1 class="num">983+</h1 class="num">
-          <p>
-              Successful Cases
-          </p>
-          <!-- <a href="#">Learn More</a> -->
-        </div>
-        <div class="service__card">
-          <span><i class="ri-profile-line"></i></span>
-          <h1 class="num">750+</h1 class="num">
-          <p>
-           Satisfied Customers
-          </p>
-          <!-- <a href="#">Learn More</a> -->
-        </div>
-        <div class="service__card">
-          <span><i class="ri-team-line"></i></span>
-          <h1 class="num">68</h1 class="num">
-          <p>
-            Team Members
-          </p>
-          <!-- <a href="#">Learn More</a> -->
+          </ul>
+
         </div>
 
-        <div class="service__card">
-          <span><i class="ri-percent-line"></i></span>
-          <h1 class="num">99.9%</h1 class="num">
-          <p>
-            Satisfaction Rate
-          </p>
-          <!-- <a href="#">Learn More</a> -->
-        </div>
-
-      </div>
-    </section>
-
-
-
-    <section class="section__container why__container">
-      <div class="why__image">
-        <img src="images/medium-shot-smiley-doctor-with-coat.jpg" alt="why choose us" />
-      </div>
-      <div class="why__content">
-        <h2 class="section__header">Why Choose Us?</h2>
-        <p>
-          With a steadfast commitment to your well-being, our team of highly
-          trained healthcare professionals ensures that you receive nothing
-          short of exceptional patient experiences.
-        </p>
-        <div class="why__grid">
-          <span><i class="ri-hand-heart-line"></i></span>
-          <div>
-            <h4>Proper Customer Care</h4>
-            <p>
-              We offer high quality customer services to help us professionally
-               respond to your query & needs.
-            </p>
-          </div>
-          <span><i class="ri-truck-line"></i></span>
-          <div>
-            <h4>On Time Delivey Services</h4>
-            <p>
-              We keep our words by delivering our products straight to your company/door step 
-              at our scheduled time.
-            </p>
-          </div>
-          <span><i class="ri-hospital-line"></i></span>
-          <div>
-            <h4>Legally Approved</h4>
-            <p>
-            We are both <strong>medically</strong> and <strong>legally</strong> approved to carry out our 
-            operations.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section__container doctors__container">
-      <div class="doctors__header">
-        <div class="doctors__header__content">
-          <h2 class="section__header">Our Products</h2>
-          <p>
-            We Provide high quality medical drugs that are legally
-            priscribed by some of the nation's most top-notch doctors.
-          </p>
-        </div>
-        <div class="doctors__nav">
-          <!-- <span><i class="ri-arrow-left-line"></i></span> -->
-          <a href="product.html" class="btn">See Our Products</a>
-          <span><i class="ri-arrow-right-line"></i></span>
-        </div>
-      </div>
-      <!-- <div class="doctors__grid">
-        <div class="doctors__card">
-          <div class="doctors__card__image">
-            <img src="assets/doctor-1.jpg" alt="doctor" />
-            <div class="doctors__socials">
-              <span><i class="ri-instagram-line"></i></span>
-              <span><i class="ri-facebook-fill"></i></span>
-              <span><i class="ri-heart-fill"></i></span>
-              <span><i class="ri-twitter-fill"></i></span>
-            </div>
-          </div>
-          <h1 class="num">Dr. Emily Smith</h1 class="num">
-          <p>Cardiologist</p>
-        </div>
-        <div class="doctors__card">
-          <div class="doctors__card__image">
-            <img src="assets/doctor-2.jpg" alt="doctor" />
-            <div class="doctors__socials">
-              <span><i class="ri-instagram-line"></i></span>
-              <span><i class="ri-facebook-fill"></i></span>
-              <span><i class="ri-heart-fill"></i></span>
-              <span><i class="ri-twitter-fill"></i></span>
-            </div>
-          </div>
-          <h1 class="num">Dr. James Anderson</h1 class="num">
-          <p>Neurosurgeon</p>
-        </div>
-        <div class="doctors__card">
-          <div class="doctors__card__image">
-            <img src="assets/doctor-3.jpg" alt="doctor" />
-            <div class="doctors__socials">
-              <span><i class="ri-instagram-line"></i></span>
-              <span><i class="ri-facebook-fill"></i></span>
-              <span><i class="ri-heart-fill"></i></span>
-              <span><i class="ri-twitter-fill"></i></span>
-            </div>
-          </div>
-          <h1 class="num">Dr. Michael Lee</h1 class="num">
-          <p>Dermatologist</p>
-        </div>
-      </div> -->
-    </section>
-
-   
-    <div class="hero-section1">
-      <h2 class="section__header">Career</h2>
-      <p>Are you interested in us? We’ll help you to open doors, provide you with the tools you need to thrive and encourage you to explore the world that sits outside your comfort zone. All of our colleagues are encouraged to discover and embrace new experiences, explore opportunities and learn from others. Because when you grow – <strong>we all grow.</strong>
-        <br>
-        <br>
-        Growth is about finding something that challenges you, that pushes you to change. If it doesn't scare you 
-        a little bit, it's probably not enough of a growth opportunity
-
-        
-      </strong> </p>
-      <div class="hero-buttons1">
-          <a href="contact.html" class="btn">Connect with Us</a>
-    
-        
       </div>
     </div>
 
-    <section class="center-content">
-      <div class="content2">
-        <p><span>www.dailysunpharmaceutical.com</span> was Designed &amp; Developed by Junior.</p>
-        <img src="images/logo.png" alt="Junior's Logo">
-        <a href="https://chisomjnr.github.io/junior.com/"  target="_blank " class="btn1">Hire Me</a>
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          Copyright 2023 All Rights <strong>Designed & Developed by <a href="https://chisomjnr.github.io/junior.com" target="_blank" class="copyright-link">Junior.</a></strong> 
+        </p>
+
       </div>
-<!--    
-      <a href="https://chisomjnr.github.io/junior.com/"  target="_blank " class="btn2">Hire Me</a> -->
-    </section>
+    </div>
+
+  </footer>
 
 
-    <footer class="footer">
-      <div class="section__container footer__container">
-        <div class="footer__col">
-          <h3>Daily Sun <span>Pharmaceutical</span>.</h3>
-          <p>
-            We are honored to be a part of your healthcare journey and committed
-            to delivering compassionate, personalized, and top-notch care every
-            step of the way.
-          </p>
-          <p>
-            Trust us with your health, and let us work together to achieve the
-            best possible outcomes for you and your loved ones.
-          </p>
-        </div>
-        <div class="footer__col">
-          <h4>About Us</h4>
-          <p>Home</p>
-          <p>About Us</p>
-          <p>Work With Us</p>
-          <p>Our Blog</p>
-          <p>Terms & Conditions</p>
-        </div>
-        <div class="footer__col">
-          <h4>Services</h4>
-          <p>Search Terms</p>
-          <p>Advance Search</p>
-          <p>Privacy Policy</p>
-          <p>Suppliers</p>
-          <p>Our Stores</p>
-        </div>
-        <div class="footer__col">
-          <h4 >Contact Us</h4 >
-          <p>
-            <i class="ri-map-pin-2-fill"></i> Head Office: Plot 3 & 4 Tomori Industrial,  estate off Idi Roko road Ota Ogun state Nigeria.  
-          </p>
-          <p><i class="ri-mail-fill"></i> dailysunpharmacoltd@gmail.com</p>
-          <p><i class="ri-phone-fill"></i> +234 916 074 3899</p>
-        </div>
-      </div>
-      <div class="footer__bar">
-        <div class="footer__bar__content">
-          <p >Copyright © 2023 <a href="https://chisomjnr.github.io/junior.com/" target="_blank" class="Junior">Junior</a>. All rights reserved.</p>
-          <div class="footer__socials">
 
-            <a href=""><span>Developed & Designed with <i class="ri-heart-fill"></i> by Junior.</span></a>   
-     
-          </div>
-        </div>
-      </div>
-    </footer>
 
-    <script src="script.js"></script>
-  </body>
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
 </html>
